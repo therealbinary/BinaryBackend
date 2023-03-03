@@ -79,9 +79,9 @@ end
 
 funcenv.Notify = function(title, description, time)
     notify.Notify({
-        Title = title
-        Description = description
-        Duration = tonumber(time)
+        Title = title,
+        Description = description,
+        Duration = tonumber(time);
     })
 end
 
