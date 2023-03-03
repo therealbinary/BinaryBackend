@@ -5,6 +5,8 @@
     if you don't mind, leave me an credit if you want to use it
 ]]
 
+local notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua", true))() -- notification module
+
 getgenv()._G._binaryfns = {}
 local funcenv = getgenv()._G._binaryfns
 
@@ -73,6 +75,14 @@ funcenv.LinearTween = function(pos, time)
         tween:Play()
         tween.Completed:Wait()
     end
+end
+
+funcenv.Notify = function(title, description, time)
+    notify.Notify({
+        Title = title
+        Description = description
+        Duration = tonumber(time)
+    })
 end
 
 return getgenv()._G._binaryfns
