@@ -43,7 +43,8 @@ funcenv.GetHumanoid = function()
 end
 
 funcenv.GetClientPing = function()
-    return (math.round(tonumber(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString())))
+    local Ping = string.split(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString(), " ")[1]
+    return (math.round(tonumber(Ping)))
 end
 
 funcenv.Teleport = function(pOrPos)
