@@ -78,11 +78,11 @@ funcenv.LinearTween = function(pos, time)
 end
 
 funcenv.Notify = function(title, description, time)
-    notify.Notify({
+    notify.Notify(
         Title = title,
         Description = description,
         Duration = tonumber(time);
-    })
+    )
 end
 
 return getgenv()._G._binaryfns
