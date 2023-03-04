@@ -86,4 +86,10 @@ funcenv.Notify = function(title, description, time)
     })
 end
 
+funcenv.FormatNumber = function(n)
+    n = tostring(n)
+	return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+end
+
+
 return getgenv()._G._binaryfns
