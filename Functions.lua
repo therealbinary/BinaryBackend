@@ -91,5 +91,12 @@ funcenv.FormatNumber = function(n)
 	return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
 end
 
+funcenv.EquipTool = function(t)
+	if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(t) == nil then
+		if game.Players.LocalPlayer.Backpack:FindFirstChild(t) then
+			game.Players.LocalPlayer.Backpack:FindFirstChild(t).Parent = game.Players.LocalPlayer.Character
+		end
+	end
+end
 
 return getgenv()._G._binaryfns
