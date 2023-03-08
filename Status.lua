@@ -3,7 +3,7 @@ return {
       ScriptDown = {false, "res"},
       ScriptVer = "0.7.9";
     },
-    [12192552089] = {
+    [11746859781] = {
       ScriptDown = {false, "res"},
       ScriptVer = "0.0.1 BETA";
     },
