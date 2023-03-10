@@ -1,6 +1,6 @@
 return {
     [8540346411] = {
-      ScriptDown = {true, "script is being updated to the latest version, this shouldnt take too much."},
+      ScriptDown = {false, "res"},
       ScriptVer = "0.7.9";
     },
     [11746859781] = {
