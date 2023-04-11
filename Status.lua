@@ -13,5 +13,5 @@ return {
       ScriptDown = {false, "res"},
       ScriptVer = "0.0.1 BETA";
     },
-    DiscordServer = "binary"
+    DiscordServer = "EaDV7sCPnj"
 }
