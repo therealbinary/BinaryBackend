@@ -1761,6 +1761,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local Label = Elements.Template.Label:Clone()
 			Label.Title.Text = LabelText
 			Label.Visible = true
+			Label.Title.RichText = true
 			Tab.Elements[LabelText] = {
 				type = 'label',
 				section = SectionParent,
