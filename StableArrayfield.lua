@@ -1554,6 +1554,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			}
 			Button.Name = ButtonSettings.Title or ButtonSettings.Name
 			Button.Title.Text = ButtonSettings.Title or ButtonSettings.Name
+			Button.Title.RichText = true
 			Button.ElementIndicator.Text = ButtonSettings.Interact or 'button'
 			Button.Visible = true
 
