@@ -3673,6 +3673,6 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
-task.delay(9, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
+
 
 return RayfieldLibrary
