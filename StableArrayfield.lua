@@ -130,7 +130,7 @@ end
 
 pcall(function()
 	_G.LastRayField.Name = 'ScriptWorldLoader'
-	_G.LastRayField.Enabled = false
+	_G.LastRayField.Enabled = true
 end)
 local ParentObject = function(Gui)
 	local success, failure = pcall(function()
