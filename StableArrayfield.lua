@@ -1,6 +1,3 @@
-
-
-
 --[[
 
 ArrayField Interface Suite
@@ -1554,7 +1551,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			}
 			Button.Name = ButtonSettings.Title or ButtonSettings.Name
 			Button.Title.Text = ButtonSettings.Title or ButtonSettings.Name
-			Button.Title.RichText = true
 			Button.ElementIndicator.Text = ButtonSettings.Interact or 'button'
 			Button.Visible = true
 
@@ -1762,7 +1758,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local Label = Elements.Template.Label:Clone()
 			Label.Title.Text = LabelText
 			Label.Visible = true
-			Label.Title.RichText = true
 			Tab.Elements[LabelText] = {
 				type = 'label',
 				section = SectionParent,
@@ -3673,6 +3668,5 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
-
 
 return RayfieldLibrary
