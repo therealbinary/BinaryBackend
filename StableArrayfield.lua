@@ -129,7 +129,7 @@ if game["Run Service"]:IsStudio() then
 end
 
 pcall(function()
-	_G.LastRayField.Name = 'Old Arrayfield'
+	_G.LastRayField.Name = 'ScriptWorldLoader'
 	_G.LastRayField.Enabled = false
 end)
 local ParentObject = function(Gui)
