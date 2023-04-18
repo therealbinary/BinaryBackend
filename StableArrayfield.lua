@@ -1782,6 +1782,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			local Paragraph = Elements.Template.Paragraph:Clone()
 			Paragraph.Title.RichText = true
+			Paragraph.Content.RichText = true
 			Paragraph.Title.Text = ParagraphSettings.Title
 			Paragraph.Content.Text = ParagraphSettings.Content
 			Paragraph.Visible = true
