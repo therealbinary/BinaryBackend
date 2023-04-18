@@ -1553,6 +1553,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				element = Button
 			}
 			Button.Name = ButtonSettings.Name
+			Button.Title.RichText = true
 			Button.Title.Text = ButtonSettings.Name
 			Button.ElementIndicator.Text = ButtonSettings.Interact or 'button'
 			Button.Visible = true
@@ -1745,6 +1746,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local LabelValue = {}
 
 			local Label = Elements.Template.Label:Clone()
+			Label.Title.RichText = true
 			Label.Title.Text = LabelText
 			Label.Visible = true
 			Tab.Elements[LabelText] = {
@@ -1782,6 +1784,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			local Paragraph = Elements.Template.Paragraph:Clone()
 			Paragraph.Title.Text = ParagraphSettings.Title
+			Paragraph.Content.RichText = true
 			Paragraph.Content.Text = ParagraphSettings.Content
 			Paragraph.Visible = true
 
