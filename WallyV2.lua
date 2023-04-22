@@ -503,6 +503,49 @@ local defaults; do
         
             self:Resize();
         end
+	function types:Label(name, options)
+            local order = self:GetOrder();
+            local determinedSize = options.LabelSize or UDim2.new(1, 0, 0, 25)
+            local determinedPos = UDim2.new(0, 0, 0, 4);
+            local secondarySize = UDim2.new(1, 0, 0, 20);
+                        
+            if order == 0 then
+                determinedSize = UDim2.new(1, 0, 0, 21)
+                determinedPos = UDim2.new(0, 0, 0, -1);
+                secondarySize = nil
+            end
+            
+            local check = library:Create('Frame', {
+                Name = 'Label';
+                BackgroundTransparency = 1;
+                Size = determinedSize;
+                BackgroundColor3 = library.options.sectncolor;
+                BorderSizePixel = 0;
+                LayoutOrder = order;
+                library:Create('TextLabel', {
+                    Name = 'section_lbl';
+                    Text = name;
+                    BackgroundTransparency = 0;
+                    BorderSizePixel = 0;
+                    BackgroundColor3 = library.options.sectncolor;
+                    TextColor3 = options.TextColor3 or library.options.textcolor or Color3.fromRGB(255, 255, 255);
+                    Position = determinedPos;
+                    Size     = (options.LabelSize or UDim2.new(1, 0, 1, 0));
+                    Font = options.Font or library.options.font;
+                    TextSize = options.TextSize or library.options.fontsize;
+                    TextStrokeTransparency = library.options.textstroke;
+                    TextStrokeColor3 = options.StrokeColor3 or library.options.strokecolor;
+                });
+                Parent = self.container;
+            });
+	    return {
+		Set = function(self, text)
+		   print(self, text)			
+		end
+	    }
+        
+            self:Resize();
+        end
 
         function types:Slider(name, options, callback)
             local default = options.default or options.min;
