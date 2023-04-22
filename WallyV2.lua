@@ -538,13 +538,14 @@ local defaults; do
                 });
                 Parent = self.container;
             });
-	    return {
+        
+            self:Resize();
+			
+	    	    return {
 		Set = function(self, text)
 		   print(self, text)			
 		end
 	    }
-        
-            self:Resize();
         end
 
         function types:Slider(name, options, callback)
