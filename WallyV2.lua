@@ -1,4 +1,3 @@
--- forked by SharKK | SharKK#1954
 
 local library = {count = 0, queue = {}, callbacks = {}, rainbowtable = {}, toggled = true, binds = {}};
 local defaults; do
@@ -6,7 +5,6 @@ local defaults; do
         local mouse        = game:GetService("Players").LocalPlayer:GetMouse();
         local inputService = game:GetService('UserInputService');
         local heartbeat    = game:GetService("RunService").Heartbeat;
-        -- // credits to Ririchi / Inori for this cute drag function :)
         function dragger.new(frame)
             local s, event = pcall(function()
                 return frame.MouseEnter
@@ -523,7 +521,7 @@ local defaults; do
                 BorderSizePixel = 0;
                 LayoutOrder = order;
                 library:Create('TextLabel', {
-                    Name = 'section_lbl';
+                    Name = 'label_lbl';
                     Text = name;
                     BackgroundTransparency = 0;
                     BorderSizePixel = 0;
@@ -534,6 +532,8 @@ local defaults; do
                     Font = options.Font or library.options.font;
                     TextSize = options.TextSize or library.options.fontsize;
                     TextStrokeTransparency = library.options.textstroke;
+		    TextXAlignment = options.X or 2
+		    TextYAlignment = options.Y or 2
                     TextStrokeColor3 = options.StrokeColor3 or library.options.strokecolor;
                 });
                 Parent = self.container;
@@ -543,7 +543,7 @@ local defaults; do
 			
 	    	    return {
 		Set = function(self, text)
-		   print(self, text)			
+		   check.Text = tostring(text)
 		end
 	    }
         end
