@@ -150,7 +150,7 @@ local defaults; do
                 wait();
                 local y = 0;
                 for i, v in next, window.container:GetChildren() do
-                    if (not v:IsA('UIListLayout')) then
+                    if (not v:IsA('UIListLayout')) and (not v:IsA('UIListLayout')) then
                         y = y + v.AbsoluteSize.Y;
                     end
                 end 
