@@ -543,9 +543,9 @@ local defaults; do
         
             self:Resize();
 			
-	    	    return {
+	    return {
 		Set = function(self, text)
-		   check.Text = tostring(text)
+		   check:FindFirstChild("label_lbl").Text = tostring(text)
 		end
 	    }
         end
