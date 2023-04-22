@@ -79,7 +79,7 @@ local defaults; do
 		    Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
 		    LineJoinMode = options.StrokeMode or 'Miter';
 		    Transparency = options.StrokeTransparency or 1;
-		}
+		});
                 library:Create("TextButton", {
                     Size = UDim2.new(0, 30, 0, 30);
                     Position = UDim2.new(1, -35, 0, 0);
