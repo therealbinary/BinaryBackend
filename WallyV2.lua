@@ -534,8 +534,8 @@ local defaults; do
                     Font = options.Font or library.options.font;
                     TextSize = options.TextSize or library.options.fontsize;
                     TextStrokeTransparency = library.options.textstroke;
-		    TextXAlignment = options.X or 2
-		    TextYAlignment = options.Y or 2
+		    TextXAlignment = options.X or 2;
+		    TextYAlignment = options.Y or 2;
                     TextStrokeColor3 = options.StrokeColor3 or library.options.strokecolor;
                 });
                 Parent = self.container;
