@@ -114,7 +114,6 @@ local defaults; do
                         SortOrder = Enum.SortOrder.LayoutOrder;
                     })
 		    library:Create('UIStroke', {
-			Parent = container;
 			ApplyStrokeMode = 'Contextual';
 			Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
 			LineJoinMode = options.StrokeMode or 'Miter';
