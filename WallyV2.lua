@@ -112,13 +112,13 @@ local defaults; do
                     library:Create('UIListLayout', {
                         Name = 'List';
                         SortOrder = Enum.SortOrder.LayoutOrder;
-                    })
+                    });
 		    library:Create('UIStroke', {
 			ApplyStrokeMode = 'Contextual';
 			Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
 			LineJoinMode = options.StrokeMode or 'Miter';
 			Transparency = options.StrokeTransparency or 1;
-	            })		
+	            });	
                 });
             })
             
