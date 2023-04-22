@@ -171,7 +171,7 @@ local defaults; do
         function types:Resize()
             local y = 0;
             for i, v in next, self.container:GetChildren() do
-                if (not v:IsA('UIListLayout')) then
+                if (not v:IsA('UIListLayout')) and (not v:IsA("UIStroke")) then
                     y = y + v.AbsoluteSize.Y;
                 end
             end 
@@ -181,7 +181,7 @@ local defaults; do
         function types:GetOrder() 
             local c = 0;
             for i, v in next, self.container:GetChildren() do
-                if (not v:IsA('UIListLayout')) then
+                if (not v:IsA('UIListLayout')) and (not v:IsA("UIStroke")) then
                     c = c + 1
                 end
             end
