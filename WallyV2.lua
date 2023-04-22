@@ -102,7 +102,7 @@ local defaults; do
                     BorderSizePixel = 0;
                     ZIndex = 3;
                 });]]
-                local container = library:Create('Frame', {
+                library:Create('Frame', {
                     Name = 'container';
                     Position = UDim2.new(0, 0, 1, 0);
                     Size = UDim2.new(1, 0, 0, 0);
@@ -113,14 +113,14 @@ local defaults; do
                         Name = 'List';
                         SortOrder = Enum.SortOrder.LayoutOrder;
                     })
+		    library:Create('UIStroke', {
+			Parent = container;
+			ApplyStrokeMode = 'Contextual';
+			Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
+			LineJoinMode = options.StrokeMode or 'Miter';
+			Transparency = options.StrokeTransparency or 1;
+	            })		
                 });
-		library:Create('UIStroke', {
-		    Parent = container;
-		    ApplyStrokeMode = 'Contextual';
-		    Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
-		    LineJoinMode = options.StrokeMode or 'Miter';
-		    Transparency = options.StrokeTransparency or 1;
-		});
             })
             
 			--[[
