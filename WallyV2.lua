@@ -519,7 +519,7 @@ local defaults; do
 	function types:Label(name, options)
             local order = self:GetOrder();
             local determinedSize = options.LabelSize or UDim2.new(1, 0, 0, 25)
-            local determinedPos = UDim2.new(0, 0, 0, 4);
+            local determinedPos = UDim2.new(0, 0, 0, 11);
             local secondarySize = UDim2.new(1, 0, 0, 20);
                         
             if order == 0 then
