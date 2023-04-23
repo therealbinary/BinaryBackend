@@ -122,7 +122,7 @@ local defaults; do
             })
             
             table.insert(library.rainbowtable, newWindow:FindFirstChild('UIStroke'))
-            table.insert(library.rainbowtable, newWindow:FindFirstChild('Container'):FindFirstChild('UIStroke'))
+            table.insert(library.rainbowtable, newWindow:FindFirstChild('container'):FindFirstChild('UIStroke'))
 
             local window = setmetatable({
                 count = 0;
