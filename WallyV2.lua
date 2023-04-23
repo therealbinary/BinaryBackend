@@ -122,6 +122,7 @@ local defaults; do
             })
             
             table.insert(library.rainbowtable, newWindow:FindFirstChild('UIStroke'))
+            print(newWindow.Name, newWindow.Parent.Name, newWindow:FindFirstChild("container"), newWindow.container:FindFirstChild("UIStroke"))
             table.insert(library.rainbowtable, newWindow:FindFirstChild('container'):FindFirstChild('UIStroke'))
 
             local window = setmetatable({
