@@ -532,7 +532,7 @@ local defaults; do
                 LayoutOrder = order;
                 library:Create('TextLabel', {
                     Name = 'section_lbl';
-                    Text = name;
+                    Text = "<b>"..name.."</b>";
                     RichText = true;
                     BackgroundTransparency = 0;
                     BorderSizePixel = 0;
@@ -552,7 +552,7 @@ local defaults; do
 
             return {
                 Set = function(self, array)
-                    check:FindFirstChild("section_lbl").Text = array; 
+                    check:FindFirstChild("section_lbl").Text = "<b>"..array.."<b>"; 
                 end
             }
         end
