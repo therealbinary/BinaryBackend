@@ -87,6 +87,7 @@ local defaults; do
                     Color = Color3.fromRGB(255, 255, 255);
                     LineJoinMode = 'Miter';
                     Transparency = 0;
+                    Thickness = 2;
                 });
                 library:Create("TextButton", {
                     Size = UDim2.new(0, 30, 0, 30);
@@ -117,6 +118,7 @@ local defaults; do
                         Color = Color3.fromRGB(255, 255, 255);
                         LineJoinMode = 'Miter';
                         Transparency = 0;
+                        Thickness = 2;
                     });
                 });
             })
