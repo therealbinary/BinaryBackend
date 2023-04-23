@@ -262,7 +262,7 @@ local defaults; do
                 library:Create('TextButton', {
                     Name = name;
                     Text = name;
-		    Text.RichText = true;
+		    RichText = true;
                     BackgroundColor3 = library.options.btncolor;
                     BorderColor3 = library.options.bordercolor;
                     TextStrokeTransparency = library.options.textstroke;
@@ -538,7 +538,7 @@ local defaults; do
                 library:Create('TextLabel', {
                     Name = 'label_lbl';
                     Text = name;
-		    Text.RichText = true;
+		    RichText = true;
                     BackgroundTransparency = 0;
                     BorderSizePixel = 0;
                     BackgroundColor3 = library.options.sectncolor;
