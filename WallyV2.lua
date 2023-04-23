@@ -198,7 +198,8 @@ local defaults; do
                     Position = UDim2.new(0, 10, 0, 0);
                     LayoutOrder = self:GetOrder();
 
-                    Text = text;
+                    Text = "<b>"..text.."</b>";
+                    RichText = true;
                     TextSize = 18;
                     Font = Enum.Font.SourceSans;
                     TextColor3 = Color3.fromRGB(255, 255, 255);
@@ -209,6 +210,12 @@ local defaults; do
                 Parent = self.container
             })
             self:Resize();
+            
+            return {
+                Set = function(self, array)
+                    object:FindFirstChild("TextLabel").Text = "<b>array</b>"
+                end
+            };
         end
 
         function types:Toggle(name, options, callback)
