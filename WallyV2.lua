@@ -84,9 +84,9 @@ local defaults; do
                 });
                 library:Create('UIStroke', {
                     ApplyStrokeMode = 'Border';
-                    Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
-                    LineJoinMode = options.StrokeMode or 'Miter';
-                    Transparency = options.StrokeTransparency or 1;
+                    Color = Color3.fromRGB(255, 255, 255);
+                    LineJoinMode = 'Miter';
+                    Transparency = 0;
                 });
                 library:Create("TextButton", {
                     Size = UDim2.new(0, 30, 0, 30);
@@ -114,10 +114,10 @@ local defaults; do
                     });
                     library:Create('UIStroke', {
                         ApplyStrokeMode = 'Border';
-                        Color = options.StrokeColor or Color3.fromRGB(255, 255, 255);
-                        LineJoinMode = options.StrokeMode or 'Miter';
-                        Transparency = options.StrokeTransparency or 1;
-                    });	
+                        Color = Color3.fromRGB(255, 255, 255);
+                        LineJoinMode = 'Miter';
+                        Transparency = 0;
+                    });
                 });
             })
             
