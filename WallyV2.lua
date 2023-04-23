@@ -285,6 +285,7 @@ local defaults; do
                 library:Create('TextButton', {
                     Name = name;
                     Text = name;
+                    RichText = true;
                     BackgroundColor3 = library.options.btncolor;
                     BorderColor3 = library.options.bordercolor;
                     TextStrokeTransparency = library.options.textstroke;
