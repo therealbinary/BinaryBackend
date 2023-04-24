@@ -971,14 +971,16 @@ local defaults; do
                 
                 input = game:GetService('UserInputService').InputBegan:connect(function(a)
                     if a.UserInputType == Enum.UserInputType.MouseButton1 and (not isInGui(container)) then
-                        check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
-                        check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').Text       = location[flag];
+                        pcall(function()
+                            check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
+                            check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').Text       = location[flag];
 
-                        container:TweenSize(UDim2.new(1, 0, 0, 0), 'In', 'Quad', 0.15, true)
-                        wait(0.15)
+                            container:TweenSize(UDim2.new(1, 0, 0, 0), 'In', 'Quad', 0.15, true)
+                            wait(0.15)
 
-                        game:GetService('Debris'):AddItem(container, 0)
-                        input:disconnect();
+                            game:GetService('Debris'):AddItem(container, 0)
+                            input:disconnect();
+                        end)
                     end
                 end)
             end)
