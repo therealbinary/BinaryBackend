@@ -293,8 +293,8 @@ local defaults; do
                     Name = name;
                     Text = name;
                     RichText = true;
-                    BackgroundColor3 = library.options.btncolor;
-                    BorderColor3 = library.options.bordercolor;
+                    BackgroundColor3 = Color3.fromRGB(1, 1, 1);
+                    BorderColor3 = Color3.fromRGB(255, 255, 255);
                     TextStrokeTransparency = library.options.textstroke;
                     TextStrokeColor3 = library.options.strokecolor;
                     TextColor3 = library.options.textcolor;
@@ -536,7 +536,7 @@ local defaults; do
                     RichText = true;
                     BackgroundTransparency = 0;
                     BorderSizePixel = 0;
-                    BackgroundColor3 = library.options.sectncolor;
+                    BackgroundColor3 = Color3.fromRGB(1, 1, 1);
                     TextColor3 = library.options.textcolor;
                     Position = determinedPos;
                     Size     = (secondarySize or UDim2.new(1, 0, 1, 0));
