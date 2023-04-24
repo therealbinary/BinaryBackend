@@ -532,7 +532,7 @@ local defaults; do
                 LayoutOrder = order;
                 library:Create('TextLabel', {
                     Name = 'section_lbl';
-                    Text = "<b>"..name.."</b>";
+                    Text = name;
                     RichText = true;
                     BackgroundTransparency = 0;
                     BorderSizePixel = 0;
@@ -552,14 +552,9 @@ local defaults; do
 
             return {
                 Set = function(self, array)
-                    check:FindFirstChild("section_lbl").Text = "<b>"..array.."<b>"; 
+                    check:FindFirstChild("section_lbl").Text = array; 
                 end
             }
-        end
-        function types:Credits()
-            for i,d in pairs(credits) do
-                self:Section(d)
-            end
         end
         function types:Slider(name, options, callback)
             local default = options.default or options.min;
