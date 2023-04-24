@@ -233,6 +233,7 @@ local defaults; do
                 library:Create('TextLabel', {
                     Name = name;
                     Text = "\r" .. name;
+                    RichText = true;
                     BackgroundTransparency = 1;
                     TextColor3 = library.options.textcolor;
                     Position = UDim2.new(0, 5, 0, 0);
@@ -250,8 +251,8 @@ local defaults; do
                         Size = UDim2.new(0, 20, 0, 20);
                         Position = UDim2.new(1, -25, 0, 4);
                         TextColor3 = library.options.textcolor;
-                        BackgroundColor3 = library.options.bgcolor;
-                        BorderColor3 = library.options.bordercolor;
+                        BackgroundColor3 = Color3.fromRGB(1, 1, 1);
+                        BorderColor3 = Color3.fromRGB(255, 255, 255);
                         TextStrokeTransparency = library.options.textstroke;
                         TextStrokeColor3 = library.options.strokecolor;
                     })
