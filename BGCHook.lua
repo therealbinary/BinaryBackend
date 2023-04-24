@@ -49,7 +49,7 @@ task.spawn(function()
             if v ~= nil then    
                 repeat wait() until v:FindFirstChild("TradeTick")
                 local PetName = v:FindFirstChild("PetName")
-                if not vmahook.IgnorePets[PetName.Text] then 
+                if not bgcwarecfg.Webhook.IgnorePets[PetName.Text] then 
                     local PetModule = require(GetPetModule(PetName.Text))
                     if not table.find(getgenv().bgcwarecfg.Webhook.IgnoreRarity, PetModule.rarity) then 
                         local OSTime = os.time() 
