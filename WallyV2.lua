@@ -853,9 +853,9 @@ local defaults; do
                 library:Create('Frame', {
                     Name = 'dropdown_lbl';
                     BackgroundTransparency = 0;
-                    BackgroundColor3 = library.options.dropcolor;
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0);
                     Position = UDim2.new(0, 5, 0, 4);
-                    BorderColor3 = library.options.bordercolor;
+                    BorderColor3 = Color3.fromRGB(255, 255, 255);
                     Size     = UDim2.new(1, -10, 0, 20);
                     library:Create('TextLabel', {
                         Name = 'Selection';
