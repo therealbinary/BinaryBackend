@@ -998,7 +998,11 @@ local defaults; do
             end
 
             return {
-                Refresh = reload;
+                Refresh = function(array)
+                    list = array
+                    location[flag] = array[1]
+                    check:WaitForChild('dropdown_lbl').Selection.Text = location[flag]
+                end
                 Set = function(self, array)
                    check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
                    location[flag] = array;
