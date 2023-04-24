@@ -107,7 +107,7 @@ local defaults; do
                     Position = UDim2.new(0, 0, 1, 0);
                     Size = UDim2.new(1, 0, 0, 0);
                     BorderSizePixel = 0;
-                    BackgroundColor3 = Color3.fromRGB(26, 23, 23);
+                    BackgroundColor3 = Color3.fromRGB(12, 12, 12);
                     ClipsDescendants = false;
                     library:Create('UIListLayout', {
                         Name = 'List';
@@ -916,7 +916,7 @@ local defaults; do
                     Name = 'DropContainer';
                     Parent = check:FindFirstChild('dropdown_lbl');
                     Size = UDim2.new(1, 0, 0, 0);
-                    BackgroundColor3 = library.options.bgcolor;
+                    BackgroundColor3 = Color3.fromRGB(12, 12, 12);
                     BorderColor3 = library.options.bordercolor;
                     Position = UDim2.new(0, 0, 1, 0);
                     ScrollBarThickness = scrollSize;
@@ -932,8 +932,8 @@ local defaults; do
                 for i, v in next, list do
                     local btn = library:Create('TextButton', {
                         Size = UDim2.new(1, 0, 0, 20);
-                        BackgroundColor3 = library.options.btncolor;
-                        BorderColor3 = library.options.bordercolor;
+                        BackgroundColor3 = Color3.fromRGB(1, 1, 1);
+                        BorderColor3 = Color3.fromRGB(255, 255, 255);
                         Text = v;
                         Font = library.options.font;
                         TextSize = library.options.fontsize;
