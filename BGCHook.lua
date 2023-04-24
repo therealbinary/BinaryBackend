@@ -51,7 +51,7 @@ task.spawn(function()
                 local PetName = v:FindFirstChild("PetName")
                 if not bgcwarecfg.Webhook.IgnorePets[PetName.Text] then 
                     local PetModule = require(GetPetModule(PetName.Text))
-                    if not table.find(getgenv().bgcwarecfg.Webhook.IgnoreRarity, PetModule.rarity) then 
+                    if not table.find(getgenv().bgcwarecfg.Webhook.IgnoreRarities, PetModule.rarity) then 
                         local OSTime = os.time() 
                         local Time = os.date('!*t', OSTime);
                         local Shiny = IsShiny(v)
