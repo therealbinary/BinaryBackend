@@ -232,7 +232,7 @@ local defaults; do
                 LayoutOrder = self:GetOrder();
                 library:Create('TextLabel', {
                     Name = name;
-                    Text = "\r" .. name;
+                    Text = name;
                     RichText = true;
                     BackgroundTransparency = 1;
                     TextColor3 = library.options.textcolor;
