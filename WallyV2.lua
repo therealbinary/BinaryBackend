@@ -576,7 +576,8 @@ local defaults; do
                     Name = name;
                     TextStrokeTransparency = library.options.textstroke;
                     TextStrokeColor3 = library.options.strokecolor;
-                    Text = "\r" .. name;
+                    Text = name;
+                    RichText = true; 
                     BackgroundTransparency = 1;
                     TextColor3 = library.options.textcolor;
                     Position = UDim2.new(0, 5, 0, 2);
@@ -860,6 +861,7 @@ local defaults; do
                         Name = 'Selection';
                         Size = UDim2.new(1, 0, 1, 0);
                         Text = list[1];
+                        RichText = true;
                         TextColor3 = library.options.textcolor;
                         BackgroundTransparency = 1;
                         Font = library.options.font;
