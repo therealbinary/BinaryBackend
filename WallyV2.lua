@@ -64,7 +64,7 @@ local defaults; do
             local newWindow = library:Create('Frame', {
                 Name = name;
                 Size = UDim2.new(0, 190, 0, 30);
-                BackgroundColor3 = options.topcolor;
+                BackgroundColor3 = Color3.fromRGB(1, 1, 1);
                 BorderSizePixel = 0;
                 Parent = library.container;
                 Position = UDim2.new(0, (15 + (200 * library.count) - 200), 0, 0);
@@ -107,7 +107,7 @@ local defaults; do
                     Position = UDim2.new(0, 0, 1, 0);
                     Size = UDim2.new(1, 0, 0, 0);
                     BorderSizePixel = 0;
-                    BackgroundColor3 = options.bgcolor;
+                    BackgroundColor3 = Color3.fromRGB(26, 23, 23);
                     ClipsDescendants = false;
                     library:Create('UIListLayout', {
                         Name = 'List';
