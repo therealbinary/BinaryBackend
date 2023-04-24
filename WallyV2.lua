@@ -987,7 +987,7 @@ local defaults; do
             
             self:Resize();
             local function reload(self, array)
-                options = array;
+                list = array;
                 location[flag] = array[1];
                 pcall(function()
                     input:disconnect()
@@ -998,9 +998,7 @@ local defaults; do
             end
 
             return {
-                Refresh = function(array)
-                    list = array
-                end,
+                Refresh = reload
                 Set = function(self, array)
                    check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
                    location[flag] = array;
