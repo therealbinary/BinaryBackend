@@ -917,7 +917,7 @@ local defaults; do
                     Parent = check:FindFirstChild('dropdown_lbl');
                     Size = UDim2.new(1, 0, 0, 0);
                     BackgroundColor3 = Color3.fromRGB(12, 12, 12);
-                    BorderColor3 = library.options.bordercolor;
+                    BorderColor3 = Color3.fromRGB(255, 255, 255);
                     Position = UDim2.new(0, 0, 1, 0);
                     ScrollBarThickness = scrollSize;
                     CanvasSize = UDim2.new(0, 0, 0, size.Y.Offset);
