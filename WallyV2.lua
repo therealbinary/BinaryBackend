@@ -1000,7 +1000,7 @@ local defaults; do
             return {
                 Refresh = function(array)
                     list = array
-                    location[flag] = array[1]
+                    location[flag] = (table.find(array, location[flag]) and location[flag] or array[1]);
                     check:WaitForChild('dropdown_lbl').Selection.Text = location[flag]
                 end,
                 Set = function(self, array)
