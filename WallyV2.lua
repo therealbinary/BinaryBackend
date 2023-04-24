@@ -1002,14 +1002,14 @@ local defaults; do
                     list = array
                     location[flag] = array[1]
                     check:WaitForChild('dropdown_lbl').Selection.Text = location[flag]
-                end
+                end,
                 Set = function(self, array)
                    check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
                    location[flag] = array;
                    check:WaitForChild('dropdown_lbl').Selection.Text = location[flag]
                    callback(location[flag])
                    game:GetService('Debris'):AddItem(container, 0)
-                end
+                end;
             }
         end
     end
