@@ -998,7 +998,7 @@ local defaults; do
             end
 
             return {
-                Refresh = reload
+                Refresh = reload;
                 Set = function(self, array)
                    check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
                    location[flag] = array;
