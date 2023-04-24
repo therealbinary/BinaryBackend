@@ -87,7 +87,7 @@ task.spawn(function()
                             ["content-type"] = "application/json"
                         }
                         ((syn and syn.request) or (http and http.request) or http_request or request) ({
-                            Url = bgcwarecfg.WebhookURL,
+                            Url = bgcwarecfg.Webhook.WebhookURL,
                             Body = Encoded,
                             Method = "POST",
                             Headers = header
