@@ -47,11 +47,7 @@ local defaults; do
             if (not gpe) then
                 if key.KeyCode == Enum.KeyCode.RightControl then
                     library.toggled = not library.toggled;
-                    for i, data in next, library.queue do
-                        local pos = (library.toggled and data.p or UDim2.new(-1, 0, -0.5,0))
-                        data.w:TweenPosition(pos, (library.toggled and 'Out' or 'In'), 'Quad', 0.15, true)
-                        wait();
-                    end
+                    data.w.Visible = library.toggled
                 end
             end
         end)
