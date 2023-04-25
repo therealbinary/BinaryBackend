@@ -48,9 +48,11 @@ local defaults; do
                 if key.KeyCode == Enum.KeyCode.RightControl then
                     library.toggled = not library.toggled;
                     for i, data in next, library.queue do
+                        local pos = (library.toggled and data.p or UDim2.new(-1, 0, -0.5,0))
                         data.w.Visible = library.toggled
                         wait();
-                    endd
+                    end
+                    end
                 end
             end
         end)
