@@ -10,14 +10,13 @@ end
 
 IsShiny = function(pet)
     if pet:FindFirstChild("Inner") then 
-        for i = 1, 45 do 
-            wait()
-            if pet.Inner:FindFirstChild("Shine") then 
-                return "SHINY "
-            end
+		local bc = pet.BackgroundColor3;
+        wait()
+        if pet.BackgroundColor3 ~= bc then
+		    return true		
         end
     end
-    return "NORMAL "
+    return false
 end
 
 getPetThumbnail = function(pet)
