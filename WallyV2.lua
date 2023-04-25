@@ -52,7 +52,6 @@ local defaults; do
                         data.w.Visible = library.toggled
                         wait();
                     end
-                    end
                 end
             end
         end)
