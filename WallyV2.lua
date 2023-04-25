@@ -47,7 +47,10 @@ local defaults; do
             if (not gpe) then
                 if key.KeyCode == Enum.KeyCode.RightControl then
                     library.toggled = not library.toggled;
-                    data.w.Visible = library.toggled
+                    for i, data in next, library.queue do
+                        data.w.Visible = library.toggled
+                        wait();
+                    endd
                 end
             end
         end)
