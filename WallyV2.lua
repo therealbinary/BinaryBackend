@@ -934,7 +934,7 @@ local defaults; do
                         Size = UDim2.new(1, 0, 0, 20);
                         BackgroundColor3 = Color3.fromRGB(1, 1, 1);
                         BorderColor3 = Color3.fromRGB(255, 255, 255);
-                        Text = "<b>"..v.."</b>;
+                        Text = "<b>"..v.."</b>";
                         RichText = true;
                         Font = library.options.font;
                         TextSize = library.options.fontsize;
