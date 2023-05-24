@@ -860,7 +860,7 @@ local defaults; do
                     library:Create('TextLabel', {
                         Name = 'Selection';
                         Size = UDim2.new(1, 0, 1, 0);
-                        Text = list[1];
+                        Text = "<b>"..list[1].."</b>";
                         RichText = true;
                         TextColor3 = library.options.textcolor;
                         BackgroundTransparency = 1;
@@ -934,7 +934,8 @@ local defaults; do
                         Size = UDim2.new(1, 0, 0, 20);
                         BackgroundColor3 = Color3.fromRGB(1, 1, 1);
                         BorderColor3 = Color3.fromRGB(255, 255, 255);
-                        Text = v;
+                        Text = "<b>"..v.."</b>;
+                        RichText = true;
                         Font = library.options.font;
                         TextSize = library.options.fontsize;
                         LayoutOrder = i;
@@ -949,7 +950,7 @@ local defaults; do
                         check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
                         check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').Text = btn.Text;
 
-                        location[flag] = tostring(btn.Text);
+                        location[flag] = tostring(string.split(btn.Text:split(">")[2], "<")[1]);
                         callback(location[flag])
 
                         game:GetService('Debris'):AddItem(container, 0)
