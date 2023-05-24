@@ -763,7 +763,7 @@ local defaults; do
                 Parent = self.container;
             })
 
-            local function rebuild(text)
+            local function Set(text)
                 box:FindFirstChild('Box').Container.ScrollBarThickness = 0
                 for i, child in next, box:FindFirstChild('Box').Container:GetChildren() do
                     if (not child:IsA('UIListLayout')) and (not v:IsA("UIStroke")) then
@@ -824,16 +824,17 @@ local defaults; do
 
             box:FindFirstChild('Box'):GetPropertyChangedSignal('Text'):connect(function()
                 if (not busy) then
-                    rebuild(box:FindFirstChild('Box').Text)
+                    Set(box:FindFirstChild('Box').Text)
                 end
             end);
 
+                
             local function reload(new_list)
                 list = new_list;
-                rebuild("")
+                Set("")
             end
             self:Resize();
-            return reload, box:FindFirstChild('Box');
+            return Set, reload, box:FindFirstChild('Box');
         end
         
         function types:Dropdown(name, options, callback)
